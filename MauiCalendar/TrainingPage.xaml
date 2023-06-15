@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyCourse.TrainingPage"
+             xmlns:local="clr-namespace:MyCourse"
+             Title="Упражнения">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="shoulder" Type="{x:Type local:Exercise}">
+                <local:Exercise Title="Жим штанги вверх" ImagePath="sitting_bench_press.jpg" Description="Базовое" />
+                <local:Exercise Title="Жим гантелей сидя" ImagePath="sitting_dumbbells_press.jpg" Description="Базовое" />
+                <local:Exercise Title="Отведение рук с гантелями" ImagePath="arm_abduction_dumbbells.jpg" Description="Изолирующее" />
+                <local:Exercise Title="Подъем гантелей перед собой" ImagePath="lifting_dumbbells_front.jpg" Description="Изолирующее" />
+                <local:Exercise Title="Подъем гантелей в наклоне" ImagePath="lifting_dumbbells_tilt.jpg" Description="Изолирующее" />
+            </x:Array>
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <x:Array x:Key="chest" Type="{x:Type local:Exercise}">
+                <local:Exercise Title="Жим лёжа" ImagePath="bench_press.png" Description="Базовое" />
+                <local:Exercise Title="Жим лёжа с гантелями" ImagePath="dumbbells_bench_press.jpeg" Description="Базовое" />
+                <local:Exercise Title="Разводка с гантелями" ImagePath="wiring_dumbbells.jpg" Description="Изолирующее" />
+                <local:Exercise Title="Пулловер" ImagePath="pullover.jpg" Description="Изолирующее" />
+                <local:Exercise Title="Отжимания" ImagePath="push_ups.jpg" Description="Базовое" />
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <Label Text="Плечи"
+               FontSize="16"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="5"/>
+        <ListView ItemsSource="{StaticResource shoulder}" ItemSelected="ShoulderListSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell
+                        ImageSource="{Binding ImagePath}"
+                        Text="{Binding Title}"
+                        Detail="{Binding Description}"
+                        TextColor="#004D40"
+                        DetailColor="#90A4AE"
+                    />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Label Text="Грудь"
+               FontSize="16"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="5"/>
+        <ListView ItemsSource="{StaticResource chest}" ItemSelected="ChestListSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell
+                        ImageSource="{Binding ImagePath}"
+                        Text="{Binding Title}"
+                        Detail="{Binding Description}"
+                        TextColor="#004D40"
+                        DetailColor="#90A4AE"
+                    />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

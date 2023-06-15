@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiCalendar.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiCalendar"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <ShellContent
+            Title="Домой"
+            Icon="homeicon.png"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+        <ShellContent
+            Title="Дневник"
+            Icon="journalicon.png"
+            ContentTemplate="{DataTemplate local:JournalPage}"
+            Route="JournalPage"/>
+        <ShellContent
+            Title="Справочник"
+            Icon="guideicon.png"
+            ContentTemplate="{DataTemplate local:ExerciseListPage}"
+            Route="ExerciseListPage"/>
+    </TabBar>
+
+</Shell>

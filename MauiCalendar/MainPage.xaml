@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyCourse.MainPage"
+             xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <StackLayout>
+        <Label Text="Запланировать тренировку"
+       x:Name="header"
+       Margin="0,10,0,30"
+       HorizontalOptions="CenterAndExpand"
+       FontSize="16"/>  
+        <calendar:SfCalendar x:Name="Calendar"
+
+                             NavigationDirection="Horizontal"
+
+                             AllowViewNavigation="False"
+
+                             SelectionChanged="Calendar_SelectionChanged"
+
+                             BackgroundColor="AliceBlue">
+
+            <calendar:SfCalendar.MonthView>
+
+                <calendar:CalendarMonthView FirstDayOfWeek="Monday"/>
+
+            </calendar:SfCalendar.MonthView>
+
+        </calendar:SfCalendar>
+        <Label Text="Мотивация"
+               HorizontalOptions="Center"
+               FontSize="16"
+               Margin="0,5,0,0"/>
+        <Border HeightRequest="180"
+                BackgroundColor="AliceBlue"
+                Stroke="AliceBlue">
+            <HorizontalStackLayout>
+                <Border WidthRequest="150" HeightRequest="150" HorizontalOptions="Start">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="90"/>
+                    </Border.StrokeShape>
+                    <Image Source="statham.jpg"
+                           WidthRequest="200"/>
+                </Border>
+                <Label x:Name="citate"
+                       Margin="0,50"
+                       HorizontalOptions="Start"
+                       TextColor="DimGrey"/>
+            </HorizontalStackLayout>
+        </Border>
+    </StackLayout>
+</ContentPage>
