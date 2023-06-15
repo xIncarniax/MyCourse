@@ -1,4 +1,4 @@
-namespace MyCourse;
+namespace MauiCalendar;
 
 public partial class ExerciseListPage : ContentPage
 {

@@ -1,6 +1,6 @@
 ﻿using Syncfusion.Maui.Calendar;
 
-namespace MyCourse;
+namespace MauiCalendar;
 
 public partial class MainPage : ContentPage
 {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyCourse
+namespace MauiCalendar
 {
     public class Exercise
     {

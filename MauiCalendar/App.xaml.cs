@@ -1,6 +1,6 @@
 ﻿using Syncfusion.Licensing;
 
-namespace MyCourse;
+namespace MauiCalendar;
 
 public partial class App : Application
 {

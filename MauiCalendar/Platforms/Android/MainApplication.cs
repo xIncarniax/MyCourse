@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace MyCourse;
+namespace MauiCalendar;
 
 [Application]
 public class MainApplication : MauiApplication

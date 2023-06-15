@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
-namespace MyCourse;
+namespace MauiCalendar;
 
 public partial class JournalPage : ContentPage, IQueryAttributable, INotifyPropertyChanged
 {

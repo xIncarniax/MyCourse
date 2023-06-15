@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 
-namespace MyCourse;
+namespace MauiCalendar;
 
 public partial class CreateProgramPage : ContentPage
 {
@@ -35,7 +35,7 @@ public partial class CreateProgramPage : ContentPage
     public async void SaveButton_Click(Object sender, EventArgs e)
     {
         //Toast.Make("Сохранено!", ToastDuration.Short, 14).Show();
-
+        
         string exerciseList = JsonConvert.SerializeObject(exercisesList);
         trainingName.Text ??= "";
 

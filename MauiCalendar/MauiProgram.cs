@@ -1,6 +1,6 @@
 ﻿using Syncfusion.Maui.Core.Hosting;
 
-namespace MyCourse;
+namespace MauiCalendar;
 
 public static class MauiProgram
 {
