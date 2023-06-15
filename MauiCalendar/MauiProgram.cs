@@ -1,4 +1,5 @@
 ﻿using Syncfusion.Maui.Core.Hosting;
+using CommunityToolkit.Maui;
 
 namespace MauiCalendar;
 
@@ -10,7 +11,8 @@ public static class MauiProgram
 		builder.ConfigureSyncfusionCore();
 		builder
 			.UseMauiApp<App>()
-			.ConfigureFonts(fonts =>
+            .UseMauiCommunityToolkit()
+            .ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");

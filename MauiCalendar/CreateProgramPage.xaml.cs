@@ -1,3 +1,5 @@
+using CommunityToolkit.Maui.Core;
+using CommunityToolkit.Maui.Alerts;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 
@@ -34,7 +36,7 @@ public partial class CreateProgramPage : ContentPage
 
     public async void SaveButton_Click(Object sender, EventArgs e)
     {
-        //Toast.Make("Сохранено!", ToastDuration.Short, 14).Show();
+        Toast.Make("Сохранено!", ToastDuration.Short, 14).Show();
         
         string exerciseList = JsonConvert.SerializeObject(exercisesList);
         trainingName.Text ??= "";
