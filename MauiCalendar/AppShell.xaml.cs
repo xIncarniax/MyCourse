@@ -1,4 +1,4 @@
-﻿namespace MauiCalendar;
+﻿namespace MyCourse;
 
 public partial class AppShell : Shell
 {

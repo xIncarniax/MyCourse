@@ -85,6 +85,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="ExerciseListPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ExercisePages\BenchPressPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
